@@ -8,12 +8,11 @@ public class Main {
         String opcion = menu.menuPrincipal();
         switch (opcion){
             case "Conversor de Moneda":
-                String valor = menu.ingresarValor();
-                if(!util.validarNumero(valor)){
-                    JOptionPane.showMessageDialog(null,"Validado");
-                }else{
-                    JOptionPane.showMessageDialog(null,"No validado");
-                }
+                String valor;
+                do{
+                    valor = menu.ingresarValor();
+                }while(util.validarNumero(valor));
+                menu.menuMonedas();
                 break;
             case "Conversor de Temperatura":
                 menu.ingresarValor();
