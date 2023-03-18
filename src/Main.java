@@ -1,10 +1,23 @@
-import javax.swing.JOptionPane;
-import java.util.HashMap;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+        Main mn = new Main();
         Menu menu = new Menu();
+        ValidarNumeros util = new ValidarNumeros();
         String opcion = menu.menuPrincipal();
-        JOptionPane.showMessageDialog(null, "Usted seleccionó " + opcion, "Resultado",JOptionPane.INFORMATION_MESSAGE);
+        switch (opcion){
+            case "Conversor de Moneda":
+                String valor = menu.ingresarValor();
+                if(!util.validarNumero(valor)){
+                    JOptionPane.showMessageDialog(null,"Validado");
+                }else{
+                    JOptionPane.showMessageDialog(null,"No validado");
+                }
+                break;
+            case "Conversor de Temperatura":
+                menu.ingresarValor();
+                break;
+        }
     }
 }
