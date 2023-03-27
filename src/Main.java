@@ -1,25 +1,46 @@
 import javax.swing.*;
-import java.text.DecimalFormat;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu();
         ValidarNumeros util = new ValidarNumeros();
-        String opcion = menu.menuPrincipal();
-        switch (opcion){
-            case "Conversor de Moneda":
-                String valor;
-                do{
-                    valor = menu.ingresarValor();
-                }while(util.validarNumero(valor));
-                double cantidad = Double.parseDouble(valor);
-                menu.menuMonedas(cantidad);
-                break;
-            case "Conversor de Temperatura":
-                menu.ingresarValor();
-                break;
+        String resultado;
+        String opcion;
+        String valor;
+        int respuesta;
+        boolean continuar = true;
+        TERMINAR:
+        while(continuar){
+            PRINCIPAL:
+            while(continuar){
+                opcion = menu.menuPrincipal();
+                switch (opcion){
+                    case "Conversor de Moneda":
+                        do{
+                            valor = menu.ingresarValor();
+                            if(valor == "null"){
+                                break PRINCIPAL;
+                            }
+                        }while(util.validarNumero(valor));
+                        double cantidad = Double.parseDouble(valor);
+                        resultado = menu.menuMonedas(cantidad);
+                        if(resultado == "null"){
+                            break PRINCIPAL;
+                        }
+                        break;
+                    case "Conversor de Temperatura":
+                        menu.ingresarValor();
+                        break;
+                    case "null":
+                        menu.finalizarPrograma();
+                        break TERMINAR;
+                }
+                respuesta = JOptionPane.showConfirmDialog(null,"¿Desea realizar otra conversión?","Confirmación",0,3);
+                if(respuesta == JOptionPane.NO_OPTION){
+                    continuar = false;
+                    menu.finalizarPrograma();
+                }
+            }
         }
     }
 }
