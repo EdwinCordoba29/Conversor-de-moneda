@@ -4,6 +4,7 @@ import java.util.Map;
 
 public class Menu {
     ConvertirMonedas convertir = new ConvertirMonedas();
+    ConvertirTemperaturas convertirTemperatura = new ConvertirTemperaturas();
     public String menuPrincipal(){
         Object[] opciones = {"Conversor de Moneda","Conversor de Temperatura"};
         Object opcion = JOptionPane.showInputDialog(null, "Seleccione una opción: ","Menu",JOptionPane.INFORMATION_MESSAGE,null,opciones,opciones[0]);
@@ -78,6 +79,42 @@ public class Menu {
                     break;
                 case "De Won sur-coreano a Pesos":
                     convertir.convertirModenasAPesos(canitdadConvertir,valorMonedas.get("KRW"));
+                    break;
+            }
+            return "";
+        }
+    }
+    public String menuTemperaturas(Double temperatura){
+        Object[] opcionesTemperaturas = {
+                "Celsius a Fahrenheit",
+                "Celsius a Kelvin",
+                "Celsius a Rankine",
+                "Fahrenheit a Celsius",
+                "Fahrenheit a Kelvin",
+                "Fahrenheit a Rankine"
+        };
+        Object opcion = JOptionPane.showInputDialog(null,"Seleccione el tipo de conversión de temperatura","Conversión de temperatura",3,null,opcionesTemperaturas,opcionesTemperaturas[0]);
+        if(opcion == null){
+            return "null";
+        }else{
+            switch (opcion.toString()){
+                case "Celsius a Fahrenheit":
+                    convertirTemperatura.celsiusAFahrenheit(temperatura);
+                    break;
+                case "Celsius a Kelvin":
+                    convertirTemperatura.celsiusAKelvin(temperatura);
+                    break;
+                case "Celsius a Rankine":
+                    convertirTemperatura.celsiusARankine(temperatura);
+                    break;
+                case "Fahrenheit a Celsius":
+                    convertirTemperatura.fahrenheitACelsius(temperatura);
+                    break;
+                case "Fahrenheit a Kelvin":
+                    convertirTemperatura.fahrenheitAKelvin(temperatura);
+                    break;
+                case "Fahrenheit a Rankine":
+                    convertirTemperatura.fahrenheitARankine(temperatura);
                     break;
             }
             return "";

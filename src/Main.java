@@ -29,7 +29,17 @@ public class Main {
                         }
                         break;
                     case "Conversor de Temperatura":
-                        menu.ingresarValor();
+                        do {
+                            valor = menu.ingresarValor();
+                            if(valor == "null"){
+                                break PRINCIPAL;
+                            }
+                        }while(util.validarNumero(valor));
+                        double temperatura = Double.parseDouble(valor);
+                        resultado = menu.menuTemperaturas(temperatura);
+                        if(resultado == "null"){
+                            break PRINCIPAL;
+                        }
                         break;
                     case "null":
                         menu.finalizarPrograma();
