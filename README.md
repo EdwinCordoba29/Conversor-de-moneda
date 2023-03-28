@@ -1,12 +1,12 @@
 # Conversor de moneda y temperatura
 ## Índice
-- [Descripción del proyecto](#"Descripción del proyecto")
+- [Descripción del proyecto](#"Descripción-del-proyecto")
 
 - [Funcionalidades](#Funcionalidades)
 
-- [Ejecutable](#Ejecutable del proyecto)
+- [Ejecutable](#Ejecutable-del-proyecto)
 
-- [Tecnologías utilizadas](#Tecnologías utilizadas)
+- [Tecnologías utilizadas](#Tecnologías-utilizadas)
 
 - [Desarrolladores](#Desarrolladores)
 ## Descripción del proyecto
