@@ -1,17 +1,17 @@
 # Conversor de moneda y temperatura
 ## Índice
-- [Descripción del proyecto](#"Descripción-del-proyecto")
+- [Descripción del proyecto](#Descripción)
 
 - [Funcionalidades](#Funcionalidades)
 
-- [Ejecutable](#Ejecutable-del-proyecto)
+- [Ejecutable](#Ejecutable)
 
-- [Tecnologías utilizadas](#Tecnologías-utilizadas)
+- [Tecnologías utilizadas](#Tecnologías)
 
 - [Desarrolladores](#Desarrolladores)
-## Descripción del proyecto
+## Descripción del proyecto<a name="Descripción"></a>
 Proyecto Conversor de moneda y temperatura. Convierte pesos colombianos a dólares, euros, libras esterlinas, yen japonés, won surcoreano y viceversa. También realiza conversión de temperaturas de grados Celsius a Fahrenheit, Kelvin, Rankine y de grados Fahrenheit a Celsius, Kelvin, Rankine.
-## Funcionalidades
+## Funcionalidades<a name="Funcionalidades"></a>
 ### Conversor de Moneda
 ![convertir monedas](recursos/convertirMoneda.gif)
 - De Pesos(COP) a Dólar(USD)
@@ -32,11 +32,11 @@ Proyecto Conversor de moneda y temperatura. Convierte pesos colombianos a dólar
 - Fahrenheit(ºF) a Celsius(ºC)
 - Fahrenheit(ºF) a Kelvin(K)
 - Fahrenheit(ºF) a Rankine(ºR)
-## Ejecutable del proyecto
+## Ejecutable del proyecto<a name="Ejecutable"></a>
 ![ruta ejecutable](recursos/rutaEjecutable.png)
 
 Para ejecutar el proyecto lo hacemos desde el archivo .jar ubicado en la ruta "out\artifacts\Conversor_de_monedas_jar\Conversor_de_monedas.jar"
-## Tecnologías utilizadas
+## Tecnologías utilizadas<a name="Tecnologías"></a>
 - Java
-## Desarrolladores
+## Desarrolladores<a name="Desarrolladores"></a>
 - Edwin Córdoba
