@@ -33,8 +33,8 @@ Proyecto Conversor de moneda y temperatura. Convierte pesos colombianos a dólar
 - Fahrenheit(ºF) a Kelvin(K)
 - Fahrenheit(ºF) a Rankine(ºR)
 ## Ejecutable del proyecto
-Para ejecutar el proyecto lo hacemos desde el archivo .jar ubicado en la ruta "out\artifacts\Conversor_de_monedas_jar\Conversor_de_monedas.jar"
 ![ruta ejecutable](recursos/rutaEjecutable.png)
+Para ejecutar el proyecto lo hacemos desde el archivo .jar ubicado en la ruta "out\artifacts\Conversor_de_monedas_jar\Conversor_de_monedas.jar"
 ## Tecnologías utilizadas
 - Java
 ## Desarrolladores
